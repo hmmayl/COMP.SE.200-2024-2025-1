@@ -20,10 +20,14 @@ jobs:
     - name: Run tests
       run: npm test
     - name: Coveralls GitHub Action
-      uses: coverallsapp/github-action@v2.3.4
+      uses: coverallsapp/github-action@master
+      with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   finish:
     runs-on: ubuntu-latest
     steps:
       - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@v2.3.4
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
