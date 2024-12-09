@@ -10,4 +10,5 @@ module.exports = {
       '^.+\\.js$': 'babel-jest',
     },
     coveragePathIgnorePatterns: ['/node_modules/', '/src/.internal/'],
+    coverageReporters: ['text', 'lcov']
 };
