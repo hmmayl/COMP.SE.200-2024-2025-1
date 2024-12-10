@@ -1,5 +1,5 @@
 # Student template
-
+[![Coverage Status](https://coveralls.io/repos/github/hmmayl/COMP.SE.200-2024-2025-1/badge.svg)](https://coveralls.io/github/hmmayl/COMP.SE.200-2024-2025-1)
 ## Purpose of this repository
 
 This is a project template for students participating in Software Testing course
