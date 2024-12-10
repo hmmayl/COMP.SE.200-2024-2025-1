@@ -24,11 +24,3 @@ jobs:
       uses: coverallsapp/github-action@master
       env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-  finish:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Coveralls GitHub Action
-        uses: coverallsapp/github-action@master
-        with:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          path-to-lcov: coverage/lcov.info
