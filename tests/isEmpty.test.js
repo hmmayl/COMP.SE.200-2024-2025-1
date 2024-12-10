@@ -6,6 +6,16 @@ describe('isEmpty', () => {
         expect(isEmpty(undefined)).toBe(true);
     });
 
+    test('returns true for booleans', () => {
+        expect(isEmpty(true)).toBe(true);
+        expect(isEmpty(false)).toBe(true);
+    });
+
+    test('returns true for numbers', () => {
+        expect(isEmpty(0)).toBe(true);
+        expect(isEmpty(123)).toBe(true);
+    });
+
     test('should return true for empty arrays', () => {
         expect(isEmpty([])).toBe(true);
     });
@@ -49,6 +59,13 @@ describe('isEmpty', () => {
         Test.prototype.prop = 'value';
         const instance = new Test();
         expect(isEmpty(instance)).toBe(true);
+    });
+
+    test('should return false for prototype objects with own properties', () => {
+        function Test() {}
+        Test.prototype.someProp = 'value';
+        const proto = Test.prototype;
+        expect(isEmpty(proto)).toBe(false); // Prototype with an own property
     });
 
     test('should handle arguments objects', () => {
