@@ -4,3 +4,10 @@ npm-debug.log
 
 # coverage files
 coverage/
+
+# vscode
+.vscode
+
+# package-lock-json
+package-lock.json
+
